@@ -5,6 +5,7 @@
    padding: 0;
 }
 
+
 .sticky-header {
     position: sticky;
     top: 0;
@@ -159,9 +160,18 @@
 }
 .mid{
     display: flex;
+    flex-wrap: nowrap;
     text-align: left;
     margin-left: 100px;
 }
+/* 
+@media (min-width: 600px) {
+    .mid {
+        flex: 0 0 50%;
+    }
+    
+} */
+
 .icons{
     display: flex;
     height: 80px;
@@ -170,10 +180,9 @@
     padding: 10px 150px 10px 150px;
     /* opacity: 0.5; */
 }
-/* .icons:hover{
-    opacity: 1;
-    cursor: pointer;
-} */
+
+
+
 
 .web {
     opacity: 0.5;   
@@ -360,8 +369,20 @@ summary {
 }
 
 .blog {
-    font-size: 35px;
-    margin-left: 30px;
+    display: flex;
+    font-size: 20px;
+    margin-left: 120px;
+    margin-top: 18px;
+    line-height: 1;
+}
+
+.blog-dot {
+    margin: 10px;
+    width: 10px;
+    height: 10px;
+    background-color:blue;
+    border-radius: 50%;
+    display: inline-block;
 }
 
 .blogimg {
@@ -459,7 +480,8 @@ h6{
 
 .social-media {
     display: flex;
-    justify-content: space-evenly;
+    gap: 1.2em;
+    padding-top: 10px;
     /* margin: 20px; */
 }
 
@@ -500,34 +522,50 @@ h6{
     justify-content: space-evenly;
 }
 
-/* Mobile Styles */
-@media (max-width: 600px) {
-    header nav ul li {
-        display: block;
-        margin: 10px 0;
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .logo img {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .navbar li {
+        margin: 0;
+        text-align: center;
+    }
+
+    .search-box {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .search-button {
+        margin-left: 0;
     }
 }
 
-/* Tablet Styles */
-@media (min-width: 601px) and (max-width: 768px) {
-    header nav ul li {
-        display: inline-block;
-        margin: 0 10px;
+@media screen and (max-width: 768px) {
+    .items {
+        margin-top: 20px;
+        margin-left: 20px;
     }
 }
 
-/* Desktop Styles */
-@media (min-width: 769px) {
-    header nav ul li {
-        display: inline-block;
+@media screen and (min-width: 769px) {
+    .container {
+        justify-content: space-evenly;
+    }
+
+    .navbar li {
         margin: 0 20px;
     }
-}
 
-
-@media (max-width: 600px) {
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
+    .search-container {
+        margin-top: 40px;
     }
 }
