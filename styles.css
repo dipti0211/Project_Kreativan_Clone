@@ -629,13 +629,17 @@ h6{
         margin-left: 0;
     }
 
-     /* .icons{
-        display: flex;
-        height: 80px;
-        width: 80px; 
+    .footer-columns-row {
+        flex-wrap: wrap;
         flex-direction: column;
+        line-height: 1.5;
+    }
+
+    .icons {
+        flex-direction: column;
+        height: 100%;
+        width: 70vw;
         
     } 
-} */
 }
 
